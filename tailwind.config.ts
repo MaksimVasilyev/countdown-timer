@@ -7,11 +7,22 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+    screens: {
+      lg: "1024px",
+    },
+    colors: {
+      grayish_blue: "hsl(237, 18%, 59%)",
+      soft_red: "hsl(345, 95%, 68%)",
+      white: "hsl(0, 0%, 100%)",
+      dark_desaturated_blue: "hsl(236, 21%, 26%)",
+      very_dark_blue: "hsl(235, 16%, 14%)",
+      mostly_black: "hsl(234, 17%, 12%)",
+    },
+    fontFamily: {
+      sans: ['"Red Hat Text"', "sans-serif"],
+    },
+    fontSize: {
+      "7px": "7px",
     },
   },
   plugins: [],
