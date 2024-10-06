@@ -20,7 +20,7 @@ const Timer: FC<TimerProps> = ({ timeLeft }) => {
   const [rotateSeconds, setRotateSeconds] = useState(false);
 
   useEffect(() => {
-    // Check changes and trigger rotations for each time unit
+    
     if (previousTime.days !== days) {
       setRotateDays(true);
       setTimeout(() => setRotateDays(false), 500);
@@ -41,9 +41,9 @@ const Timer: FC<TimerProps> = ({ timeLeft }) => {
       setTimeout(() => setRotateSeconds(false), 500);
     }
 
-    // Update the previous time to the current time
+   
     setPreviousTime(timeLeft);
-  }, [timeLeft, previousTime]);
+  }, [days, hours, minutes, seconds, previousTime, timeLeft]);
 
   return (
     <div className="flex gap-4 xl:gap-8 justify-center">

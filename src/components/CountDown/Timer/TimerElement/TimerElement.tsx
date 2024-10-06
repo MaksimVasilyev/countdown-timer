@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 
 interface TimerElementProps {
   time: number;
@@ -11,6 +11,19 @@ const TimerElement: FC<TimerElementProps> = ({
   timeStamp,
   shouldRotate,
 }) => {
+
+  const [clientTime, setClientTime] = useState<number | null>(null);
+
+  useEffect(() => {
+  
+    setClientTime(time);
+  }, [time]);
+
+  
+  if (clientTime === null) {
+    return null; 
+  }
+
   const formattedTime = time.toString().padStart(2, '0');
   return (
     <div className="flex flex-col gap-[9px] xl:gap-[16px]  items-center ">
