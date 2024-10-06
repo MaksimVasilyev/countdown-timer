@@ -19,7 +19,7 @@ export default function RootLayout({
     <>
       <html lang="en" className={red_hat_text.className}>
         <body>
-          {children}
+          <main>{children}</main>
           <Footer />
         </body>
       </html>

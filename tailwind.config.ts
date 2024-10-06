@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      lg: "1024px",
+      xl: "1440px",
     },
     colors: {
       grayish_blue: "hsl(237, 18%, 59%)",
@@ -17,7 +17,12 @@ const config: Config = {
       dark_desaturated_blue: "hsl(236, 21%, 26%)",
       very_dark_blue: "hsl(235, 16%, 14%)",
       mostly_black: "hsl(234, 17%, 12%)",
+      black: "hsl(0, 0%, 0%)",
+      
     },
+    // opacity: {
+    //   "15": "0.15",
+    // },
     fontFamily: {
       sans: ['"Red Hat Text"', "sans-serif"],
     },
